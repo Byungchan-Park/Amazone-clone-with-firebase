@@ -1,0 +1,35 @@
+.product-in-basket {
+  padding: 20px 0;
+  border-bottom: 1px solid lightgray;
+}
+.product-in-basket__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.product-in-basket__info > * {
+  flex: 1;
+  text-align: center;
+}
+.product-in-basket__image > img {
+  max-width: 150px;
+  width: 100%;
+}
+.product-in-basket__title {
+  text-align: left;
+}
+.product-in-basket__quantity input {
+  width: 60px;
+}
+.product-in-basket__info button {
+  flex: 1;
+  border: 0;
+  padding: 10px 0;
+  background-color: #c66;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.product-in-basket__info button:hover {
+  background-color: #a44;
+}

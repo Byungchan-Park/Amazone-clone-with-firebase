@@ -1,0 +1,29 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+}
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.checkout__title {
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.column-labels {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 1px solid lightgray;
+}
+.column-labels * {
+  flex: 1;
+}
+.checkout__bottom {
+  margin-left: auto;
+}
