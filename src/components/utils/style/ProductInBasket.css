@@ -1,6 +1,5 @@
 .product-in-basket {
   padding: 20px 0;
-  border-bottom: 1px solid lightgray;
 }
 .product-in-basket__info {
   display: flex;

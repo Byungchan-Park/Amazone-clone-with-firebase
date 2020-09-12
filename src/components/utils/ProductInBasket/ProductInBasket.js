@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import "../style/ProductInBasket.css"
 import { useStateValue } from "../../../StateProvider"
 
-function ProductInBasket({ id, title, image, price, quantity }) {
+function ProductInBasket({ id, title, image, price, quantity, hideButton }) {
   const [amount, setAmount] = useState(quantity)
-  const [{ basket }, dispatch] = useStateValue()
+  const [state, dispatch] = useStateValue()
   const removeFromBasket = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
@@ -39,7 +39,8 @@ function ProductInBasket({ id, title, image, price, quantity }) {
         <div class="product-in-basket__quantity">
           <input type="number" onChange={handleAmount} value={amount} min="1" />
         </div>
-        <button onClick={removeFromBasket}>Remove</button>
+        {!hideButton && <button onClick={removeFromBasket}>Remove</button>}
+
         <span className="product-in-basket__total">{price * quantity}</span>
       </div>
     </div>

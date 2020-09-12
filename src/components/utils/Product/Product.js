@@ -4,7 +4,6 @@ import { useStateValue } from "../../../StateProvider"
 
 function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue()
-  console.log(basket)
 
   const addToBasket = () => {
     // 버튼을 눌렀을 때 장바구니에 상품이 추가되는데
@@ -13,7 +12,6 @@ function Product({ id, title, image, price, rating }) {
     // 분기 처리를 하는 조건이 중요함.
     const isAdded = basket.some((product) => product.id === id)
     if (!isAdded) {
-      console.log("add a new product")
       dispatch({
         type: "ADD_TO_BASKET",
         item: {
@@ -26,7 +24,6 @@ function Product({ id, title, image, price, rating }) {
         },
       })
     } else {
-      console.log("add a same product")
       dispatch({
         type: "ADD_SAME_PRODUCT_TO_BASKET",
         item: {
